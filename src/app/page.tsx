@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react'
 import { SettingsTabs } from './components/SettingsTabs'
 import * as Input from './components/Sidebar/Input'
+import * as FileInput from './components/Form/FileInput'
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           action=""
           className="mt-6 flex w-full flex-col gap-5 divide-y divide-zinc-200"
         >
-          <div className="grid-cols-form grid gap-3">
+          <div className="grid grid-cols-form gap-3">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
@@ -57,7 +58,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
@@ -79,19 +80,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
-            <label
-              htmlFor="photo"
-              className="text-sm font-medium text-zinc-700 "
-            >
+          <div className="grid grid-cols-form gap-3 pt-5">
+            <label htmlFor="" className="text-sm font-medium text-zinc-700">
               Your photo
               <span className="text-md mt-0.5 block font-normal text-zinc-500">
                 This will be displayed on your profile.
               </span>
             </label>
+
+            <FileInput.Root className="flex items-start gap-5">
+              <FileInput.ImagePreview />
+              <FileInput.Trigger />
+              <FileInput.Control />
+            </FileInput.Root>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">
               Role
             </label>
@@ -102,7 +106,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="country"
               className="text-sm font-medium text-zinc-700"
@@ -112,7 +116,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-6"></div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="timezone"
               className="text-sm font-medium text-zinc-700"
@@ -122,7 +126,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-6"></div>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="bio" className="text-sm font-medium text-zinc-700 ">
               Bio
               <span className="text-md mt-0.5 block font-normal text-zinc-500">
@@ -131,7 +135,7 @@ export default function Home() {
             </label>
           </div>
 
-          <div className="grid-cols-form grid gap-3 pt-5">
+          <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="portfolio"
               className="text-sm font-medium text-zinc-700 "
@@ -150,6 +154,7 @@ export default function Home() {
             >
               Cancel
             </button>
+
             <button
               name="settings"
               className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-violet-700"
