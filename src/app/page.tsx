@@ -138,7 +138,7 @@ export default function Home() {
           <div className="grid grid-cols-form gap-3 pt-5">
             <label
               htmlFor="portfolio"
-              className="text-sm font-medium text-zinc-700 "
+              className="text-sm font-medium text-zinc-700"
             >
               Portfolio projects
               <span className="text-md mt-0.5 block font-normal text-zinc-500">
@@ -146,8 +146,9 @@ export default function Home() {
               </span>
             </label>
 
-            <FileInput.Root className="flex items-start gap-5">
+            <FileInput.Root className="flex flex-col items-start gap-5">
               <FileInput.Trigger />
+              <FileInput.FileList />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>
