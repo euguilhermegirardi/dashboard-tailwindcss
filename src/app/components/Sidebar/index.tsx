@@ -12,8 +12,8 @@ import {
 import { NavItem } from './NavItem'
 import { Profile } from './Profile'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
-import { Logo } from '../icons/Logo'
-import * as Input from './Input'
+import { Logo } from './icons/Logo'
+import * as Input from '../Input'
 
 export function Sidebar() {
   return (
