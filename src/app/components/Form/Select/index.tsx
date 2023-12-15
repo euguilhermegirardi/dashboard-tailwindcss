@@ -17,6 +17,7 @@ export function Select({ children, placeholder, ...props }: SelectProps) {
           placeholder={placeholder}
           className="text-black"
         />
+
         <SelectPrimitive.Icon>
           <ChevronDown className="h-5 w-5 text-zinc-500" />
         </SelectPrimitive.Icon>
@@ -27,7 +28,7 @@ export function Select({ children, placeholder, ...props }: SelectProps) {
           side="bottom"
           position="popper"
           sideOffset={8}
-          className="z-index-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
+          className="z-index-10 animate-slideDownAndFade w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
         >
           <SelectPrimitive.Viewport>{children}</SelectPrimitive.Viewport>
         </SelectPrimitive.Content>
